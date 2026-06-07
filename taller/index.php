@@ -35,9 +35,9 @@ $fechaHoy = date('d/m/Y H:i:s');
     --radio: 16px;
 
     /* Colores del fondo animado (brillo) */
-   --bg-glow-start: #fef6f9;
---bg-glow-mid: #fce4ec;
---bg-glow-end: #fef6f9;
+    --bg-glow-start: #fef6f9;
+    --bg-glow-mid: #fce4ec;
+     --bg-glow-end: #fef6f9;
 
     /* Colores de las líneas de la cuadrícula */
     --grid-line-strong: rgba(255, 74, 112, 0.22);

@@ -44,7 +44,7 @@ for ($i = 1; $i <= 200; $i++) {
     </div>
 
     <div class="nota-proceso">
-        ✅ Ciclo <code>for</code> + operador <code>%</code> para clasificar.
+        Ciclo <code>for</code> + operador <code>%</code> para clasificar.
     </div>
 
     <?= Utilidades::enlaceMenu('../index.php') ?>

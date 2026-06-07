@@ -41,7 +41,7 @@ class Utilidades
 
     /**
      * Valida formato de fecha DD-MM o MM/DD/YYYY.
-     * @used-by problema 8 (original de la amiga)
+     * @used-by problema 8 (original de Etrella, adaptado para ambos formatos)
      */
     public static function validarFecha(string $fecha): bool
     {
@@ -112,7 +112,7 @@ class Utilidades
 
     /**
      * Calcula la desviación estándar poblacional (σ = sqrt(Σ(x-μ)² / N)).
-     * @used-by problema 7 (adaptación de la compañera)
+     * @used-by problema 7 (adaptación del de Etrella)
      */
     public static function calcularDesviacionPoblacional(array $numeros): float
     {
