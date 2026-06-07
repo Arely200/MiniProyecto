@@ -19,8 +19,8 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
 ---
 
 ## Estructura del Proyecto
-![alt text](imag1.png)
 
+![alt text](image-7.png)
 
 ---
 
@@ -30,7 +30,7 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
    - Servidor local (XAMPP, WAMP, o PHP built-in server).  
    - PHP 7.4 o superior.  
    ![alt text](image.png)
-   php -S localhost:8000
+
 
 
 2. **Pasos**:  
@@ -44,7 +44,9 @@ PHP 8 (lógica del servidor, formularios, sesiones CSRF opcionales)
 ![alt text]( image-1.png) 
 
 HTML5 + CSS3 (diseño responsive, variables CSS, animaciones).
-![alt text](image-3.png)
+
+![alt text](image-8.png)
+
 JavaScript (gráfica Chart.js en problema 6).
 ![alt text](mage-2.png)
 
