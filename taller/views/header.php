@@ -21,6 +21,8 @@ $rutaCss = (basename(dirname(__FILE__)) === 'views')
 <body>
 <header>
     <h1>Universidad Tecnológica de Panamá</h1>
-    <p>Desarrollo VII – Mini Proyecto #2 | Ing. Irina Fong</p>
+    <p>Desarrollo VII – Mini Proyecto #2  </p>
+    <p>Arely Mendoza</p>
+  <p>Estrella Pino</p>
 </header>
 <main> <!-- ← Esto es clave: abre el main -->

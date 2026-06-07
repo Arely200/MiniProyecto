@@ -1,3 +1,11 @@
+/**
+ * problema3.php — N primeros múltiplos de 4.
+ * El usuario ingresa N (entre 1 y 10000) y se generan los primeros N múltiplos de 4.
+ * Estructura: ciclo for.
+ * Se controla desbordamiento con límite de 10000.
+ */
+
+
 <?php
 require_once __DIR__ . '/../models/Utilidades.php';
 

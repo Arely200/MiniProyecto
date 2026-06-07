@@ -1,3 +1,12 @@
+
+/**
+ * problema6.php — Distribución de presupuesto hospitalario.
+ * Se ingresa el presupuesto anual y se reparte según:
+ * Ginecología 40%, Traumatología 35%, Pediatría 25%.
+ * Muestra resultados en tabla y gráfica circular con Chart.js.
+ * Estructuras: foreach, if.
+ */
+
 <?php
 require_once __DIR__ . '/../models/Utilidades.php';
 $tituloPagina = 'Problema #6 – Presupuesto Hospitalario';

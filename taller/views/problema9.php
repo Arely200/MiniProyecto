@@ -1,4 +1,11 @@
 <?php
+/**
+ * problema9.php — Potencias de un número.
+ * Se ingresa un número del 1 al 9 y se muestran sus primeras 15 potencias
+ * (base^1 hasta base^15).
+ * Estructura: ciclo for.
+ */
+
 require_once __DIR__ . '/../models/Utilidades.php';
 $tituloPagina = 'Problema #9 – Potencias';
 require_once __DIR__ . '/header.php';

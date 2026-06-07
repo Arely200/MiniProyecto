@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * problema8.php — Estación del año según fecha.
+ * El usuario ingresa una fecha (formato YYYY-MM-DD) y se devuelve la estación
+ * correspondiente (Primavera, Verano, Otoño, Invierno) según el hemisferio norte.
+ * Estructuras: switch o if-else para determinar rangos de fecha.
+ */
 require_once __DIR__ . '/../models/Utilidades.php';
 $tituloPagina = 'Problema #8 – Estación del Año';
 require_once __DIR__ . '/header.php';

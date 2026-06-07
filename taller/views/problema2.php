@@ -1,3 +1,11 @@
+/**
+ * problema2.php — Suma de números del 1 al 1000.
+ * Calcula la suma acumulativa de los enteros desde 1 hasta 1000.
+ * Estructura: ciclo for.
+ * Resultado esperado: 500,500.
+ */
+
+
 <?php
 require_once __DIR__ . '/../models/Utilidades.php';
 

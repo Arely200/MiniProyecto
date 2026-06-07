@@ -1,7 +1,10 @@
 <?php
 /**
- * problema7.php - Adaptación del código de la compañera.
- * Calcula promedio, desviación estándar, mínimo y máximo de 5 notas fijas.
+ * problema7.php — Calculadora de datos estadísticos.
+ * El usuario ingresa 5 notas (0-100) y se calcula:
+ * promedio, desviación estándar (poblacional), nota mínima y máxima.
+ * Estructuras: foreach para recorrer notas.
+ * Usa métodos estáticos de Utilidades.
  */
 require_once __DIR__ . '/../models/Utilidades.php';
 $tituloPagina = 'Problema #7 – Calculadora Estadística';

@@ -1,7 +1,10 @@
 <?php
 /**
  * problema1.php — Estadísticas de 5 números positivos.
- * Validación en servidor, mensajes de error debajo de cada campo, uso de foreach.
+ * Se solicitan 5 números positivos mediante formulario y se calcula:
+ * media, desviación estándar, valor mínimo y máximo.
+ * Estructuras: foreach para validación, for para mostrar campos.
+ * Validación: números positivos, no letras, no negativos.
  */
 require_once __DIR__ . '/../models/Utilidades.php';
 
