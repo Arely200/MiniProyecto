@@ -30,8 +30,7 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
 1. **Requisitos**:  
    - Servidor local (XAMPP, WAMP, o PHP built-in server).  
    - PHP 7.4 o superior.  
-   ![alt text](image.png)
-
+   ![alt text](Imagenes/image.png)
 
 
 2. **Pasos**:  
@@ -42,18 +41,17 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
 
 ## nologías utilizadas
 PHP 8 (lógica del servidor, formularios, sesiones CSRF opcionales)
-![alt text](taller/Imagenes/image-1.png)
+![alt text](Imagenes/image-1.png)
 
 HTML5 + CSS3 (diseño responsive, variables CSS, animaciones).
-
-![alt text](image-9.png)
+![alt text](Imagenes/image-9.png)
 
 JavaScript (gráfica Chart.js en problema 6).
-![alt text](image-10.png)
+![alt text](Imagenes/image-10.png)
 
 
 Git / GitHub (control de versiones).
-![alt text](image-4.png)
+![alt text](Imagenes/image-4.png)
 
 
 ## Patrón MVC y Clase Utilidades
@@ -71,9 +69,6 @@ Prevención de XSS: Uso de Utilidades::limpiarHtml() (que encapsula htmlspecialc
 Validación de entradas: Métodos validarNumero, validarRango, validarEnteroPositivo basados en filter_var.
 
 Gestión de errores segura: El controlador no muestra mensajes de error de PHP; redirige o muestra un mensaje genérico en caso de problema no encontrado.
-
-## Problemas resueltos
-![alt text](image-5.png)
 
 ## Diseño visual
 Fuente principal: Poppins (Google Fonts).
