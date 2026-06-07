@@ -1,0 +1,1022 @@
+/* ==========================================================================
+   TALLER PHP — DESARROLLO WEB VII
+   Tema: Neo-Brutalista Femenino · High Contrast · Pro Level
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+/* 
+   1. KEYFRAMES */
+@keyframes viajeCuadricula {
+    0%   { background-position: 0 0, 0 0, 0 0, 0 0; }
+    100% { background-position: 40px 40px, 40px 40px, 10px 10px, 10px 10px; }
+}
+@keyframes brilloHolografico {
+    0%   { background-color: #fff0f3; }
+    50%  { background-color: #ffe5ec; }
+    100% { background-color: #fff0f3; }
+}
+@keyframes entradaPremium {
+    0%   { opacity: 0; transform: scale(0.9) translateY(40px); }
+    100% { opacity: 1; transform: scale(1)   translateY(0); }
+}
+@keyframes slideDown {
+    0%   { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   2. RESET Y VARIABLES
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+    --rosa:       #ff4a70;
+    --rosa-dark:  #ff2a55;
+    --rosa-light: #ffe0e8;
+    --rosa-pale:  #fff0f3;
+    --oscuro:     #2d181b;
+    --oscuro-mid: #63474a;
+    --blanco:     #ffffff;
+    --radio:      16px;
+}
+
+/* ==========================================================================
+   3. BODY
+   ========================================================================== */
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-image:
+        linear-gradient(to right,  rgba(255,74,112,.25) 2px, transparent 2px),
+        linear-gradient(to bottom, rgba(255,74,112,.25) 2px, transparent 2px),
+        linear-gradient(to right,  rgba(255,143,164,.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,143,164,.12) 1px, transparent 1px);
+    background-size: 40px 40px, 40px 40px, 10px 10px, 10px 10px;
+    animation: viajeCuadricula 4s linear infinite, brilloHolografico 10s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   4. HEADER
+   ========================================================================== */
+header {
+    background: #3d2a2c
+    ; /* ← Verde llamativo unificado */
+    border-bottom: 4px solid var(--rosa);
+    padding: 1.2rem 2rem;
+    text-align: center;
+    position: relative;
+    animation: slideDown .5s ease forwards;
+
+}
+header::after {
+    content: 'UTP · FISC · DEV WEB VII';
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rosa);
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    padding: 3px 14px;
+    border-radius: 20px;
+    border: 2px solid var(--oscuro);
+    white-space: nowrap;
+}
+header h1 { color: #fff; font-size: 1.3rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+header p  { color: var(--rosa-light); font-size: .8rem; font-weight: 600; margin-top: .3rem; text-align: center; margin-bottom: 0; }
+
+/* ==========================================================================
+   5. MAIN
+   ========================================================================== */
+main { flex: 1; padding: 3rem 1rem 2rem; max-width: 900px; margin: 0 auto; width: 100%; }
+
+/* ==========================================================================
+   6. CARD (PARA SUBPÁGINAS)
+   ========================================================================== */
+.card {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    border: 3px solid var(--oscuro);
+    box-shadow: 12px 12px 0px var(--rosa);
+    padding: 2rem 1.75rem;
+    margin-bottom: 2rem;
+    animation: entradaPremium .7s cubic-bezier(.175,.885,.32,1.275) forwards;
+    transition: box-shadow .25s, transform .25s;
+}
+.card:hover { box-shadow: 12px 12px 0px var(--oscuro); transform: translate(-4px,-4px); }
+.card h2 {
+    color: var(--oscuro); font-size: 1.15rem; font-weight: 900;
+    text-transform: uppercase; letter-spacing: .5px;
+    margin-bottom: 1rem; padding-bottom: .6rem;
+    border-bottom: 3px solid var(--rosa-light);
+}
+
+/* ==========================================================================
+   7. MENÚ GRID (CORREGIDO PARA TU INDEX)
+   ========================================================================== */
+main > h2 { color: var(--oscuro); font-weight: 900; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: .4rem; }
+main > p  { color: var(--oscuro-mid); font-size: .88rem; font-weight: 600; margin-bottom: 1.5rem; }
+
+.menu-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 1.3rem; 
+    margin-top: 1rem; 
+}
+
+.menu-card {
+    background: var(--blanco);
+    border: 3px solid var(--oscuro);
+    border-radius: var(--radio);
+    padding: 1.5rem 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--oscuro);
+    box-shadow: 6px 6px 0px var(--rosa);
+    transition: transform .15s, box-shadow .15s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: entradaPremium .6s ease forwards;
+}
+.menu-card:hover { transform: translate(-4px,-4px); box-shadow: 10px 10px 0px var(--oscuro); }
+.menu-card .numero { font-size: 2.2rem; font-weight: 900; color: var(--rosa); line-height: 1; }
+.menu-card .titulo { font-size: .85rem; font-weight: 800; margin-top: .5rem; text-transform: uppercase; letter-spacing: .5px; color: var(--oscuro); }
+
+/* ==========================================================================
+   8. FORMULARIOS
+   ========================================================================== */
+label {
+    font-size: .72rem; font-weight: 800; color: var(--oscuro);
+    margin-bottom: .4rem; text-transform: uppercase; letter-spacing: 2px; display: block;
+}
+input[type="number"], input[type="text"], input[type="date"] {
+    background: var(--blanco);
+    border: 3px solid var(--oscuro);
+    border-radius: 12px;
+    padding: .75rem 1rem;
+    font-size: .95rem;
+    color: var(--oscuro);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    outline: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 0px rgba(45,24,27,.12);
+    transition: all .2s ease;
+}
+input:focus {
+    background: var(--rosa-pale);
+    border-color: var(--rosa);
+    box-shadow: 5px 5px 0px var(--oscuro);
+    transform: translate(-2px,-2px);
+}
+
+/* ==========================================================================
+   9. BOTONES
+   ========================================================================== */
+button[type="submit"], button {
+    background: var(--rosa);
+    color: var(--blanco);
+    border: 3px solid var(--oscuro);
+    border-radius: 14px;
+    padding: .85rem 1.4rem;
+    font-size: .9rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: .5rem;
+    box-shadow: 0px 6px 0px var(--oscuro);
+    transition: all .15s ease;
+}
+button:hover { background: var(--rosa-dark); transform: translateY(-3px); box-shadow: 0px 9px 0px var(--oscuro); }
+button:active { transform: translateY(6px); box-shadow: 0px 0px 0px var(--oscuro); }
+
+/* ==========================================================================
+   10. ALERTAS
+   ========================================================================== */
+.alerta { padding: 1rem; border-radius: 12px; border: 3px solid var(--oscuro); box-shadow: 4px 4px 0px var(--oscuro); margin-bottom: 1rem; display: flex; align-items: center; font-size: .88rem; font-weight: 700; }
+.alerta-error { background: #fdecea; color: #b71c1c; box-shadow: 4px 4px 0px #b71c1c; }
+.alerta-ok    { background: #eafaf1; color: #1e7e34; box-shadow: 4px 4px 0px #1e7e34; }
+
+/* ==========================================================================
+   11. TABLAS
+   ========================================================================== */
+table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .88rem; border: 3px solid var(--oscuro); border-radius: 12px; overflow: hidden; box-shadow: 4px 4px 0px var(--oscuro); margin-top: .8rem; }
+th { background: var(--oscuro); color: var(--blanco); padding: .65rem .9rem; text-align: left; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: .76rem; }
+td { padding: .55rem .9rem; border-top: 2px solid var(--rosa-light); color: var(--oscuro); font-weight: 600; }
+tr:nth-child(even) td { background: var(--rosa-pale); }
+
+/* ==========================================================================
+   12. RESULTADO
+   ========================================================================== */
+.resultado { margin-top: 1.5rem; }
+.resultado h3 { color: var(--oscuro); font-size: .95rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: .7rem; }
+
+
+/* ==========================================================================
+   13. BARRAS
+   ========================================================================== */
+.barra-contenedor { margin-top: .8rem; }
+.barra-fila { display: flex; align-items: center; gap: .7rem; margin-bottom: .55rem; font-size: .85rem; }
+.barra-etiqueta { width: 130px; text-align: right; font-weight: 700; color: var(--oscuro); font-size: .8rem; }
+.barra { height: 24px; border-radius: 6px; border: 2px solid var(--oscuro); background: linear-gradient(90deg, var(--rosa), var(--rosa-dark)); box-shadow: 2px 2px 0 var(--oscuro); min-width: 6px; }
+.barra-valor { width: 80px; font-weight: 800; color: var(--oscuro); font-size: .85rem; }
+
+/* ==========================================================================
+   14. BTN MENÚ
+   ========================================================================== */
+.btn-menu {
+    display: inline-block; margin-top: 1.4rem;
+    padding: .6rem 1.3rem;
+    background: var(--oscuro); color: var(--blanco);
+    border: 3px solid var(--oscuro); border-radius: 10px;
+    text-decoration: none; font-size: .8rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 1px;
+    box-shadow: 4px 4px 0px var(--rosa);
+    transition: all .15s ease;
+}
+.btn-menu:hover { background: var(--rosa); box-shadow: 4px 4px 0px var(--oscuro); transform: translate(-2px,-2px); }
+
+/* ==========================================================================
+   15. CODE / PRE
+   ========================================================================== */
+pre { background: var(--oscuro); color: #ffd6e0; border: 3px solid var(--oscuro); border-radius: 12px; padding: 1rem 1.2rem; font-size: .82rem; overflow: auto; box-shadow: 4px 4px 0px var(--rosa); font-family: 'Courier New', monospace; line-height: 1.6; }
+code { background: var(--rosa-light); color: var(--rosa-dark); padding: .1rem .4rem; border-radius: 4px; font-size: .85em; font-weight: 700; border: 1px solid var(--rosa); }
+
+/* ==========================================================================
+   16. FOOTER
+   ========================================================================== */
+.site-footer { background: var(--oscuro); border-top: 4px solid var(--rosa); color: var(--rosa-light); text-align: center; padding: .9rem 1rem; font-size: .78rem; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+.site-footer strong { color: var(--rosa); }
+
+/* ==========================================================================
+   17. SCROLLBAR
+   ========================================================================== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--rosa-pale); }
+::-webkit-scrollbar-thumb { background: var(--rosa); border-radius: 4px; border: 2px solid var(--oscuro); }
+::-webkit-scrollbar-thumb:hover { background: var(--rosa-dark); }
+::selection { background: var(--rosa); color: var(--blanco); }
+
+/* ==========================================================================
+   18. RESPONSIVE
+   ========================================================================== */
+@media (max-width: 600px) {
+    main { padding: 2.5rem .75rem 1.5rem; }
+    .menu-grid { grid-template-columns: repeat(2, 1fr); }
+    .card { padding: 1.5rem 1.1rem; }
+    header h1 { font-size: 1rem; }
+    .barra-etiqueta { width: 80px; font-size: .72rem; }
+}
+
+
+/* ============================================
+   PROBLEMA 1 - ESTILO MODERNO (TARJETAS)
+   ============================================ */
+.problema1 .form-numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.problema1 .form-numeros input {
+    width: 100%;
+}
+.resultado-stats {
+    margin-top: 2rem;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.stat-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ff4a70;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.stat-card:hover {
+    transform: translateY(-3px);
+    background: #fff0f3;
+    box-shadow: 4px 4px 0px #2d181b;
+}
+.stat-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ff4a70;
+    margin-bottom: 0.5rem;
+}
+.stat-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2d181b;
+}
+
+/* ============================================
+   Estilos para errores elegantes (problema 1)
+   ============================================ */
+.problema1 .form-profesional {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.campo-grupo {
+    width: 100%;
+}
+.input-error {
+    border-color: #e74c3c !important;
+    background-color: #fff5f5 !important;
+}
+.error-msg {
+    display: block;
+    font-size: 0.7rem;
+    color: #e74c3c;
+    margin-top: 0.2rem;
+    font-weight: 500;
+}
+
+
+.tabla-resultados {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+.tabla-resultados th,
+.tabla-resultados td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ffe0e8;
+}
+.tabla-resultados th {
+    background-color: #ff4a70;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tabla-resultados tr:last-child td {
+    border-bottom: none;
+}
+.tabla-resultados tr:hover td {
+    background-color: #fff0f3;
+}
+
+
+
+/* ============================================
+   PROBLEMA 2 - ESTILO MINIMALISTA ELEGANTE
+   ============================================ */
+.problema2 {
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #2d181b;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 12px 12px 0px #ff4a70;
+}
+.resultado-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ff4a70;
+    margin-bottom: 0.5rem;
+}
+.suma-descripcion {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d181b;
+    margin-bottom: 1rem;
+}
+.suma-igual {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #2d181b;
+    margin: 0.5rem 0;
+    line-height: 1.2;
+}
+.suma-nota {
+    font-size: 0.75rem;
+    color: #63474a;
+    margin-top: 1rem;
+    font-style: italic;
+}
+.problema2 code {
+    background: #fff0f3;
+    padding: 0.1rem 0.4rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* ============================================
+   PROBLEMA 3 - ESTILO MINIMALISTA
+   ============================================ */
+.problema3 {
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #2d181b;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 12px 12px 0px #ff4a70;
+}
+.resultado-label {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ff4a70;
+    margin-bottom: 0.5rem;
+}
+.multiplos-descripcion {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2d181b;
+    margin-bottom: 1rem;
+}
+.multiplos-form input {
+    width: 80%;
+    margin: 0 auto 1rem;
+    display: block;
+    text-align: center;
+}
+.multiplos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+    max-height: 220px;
+    overflow-y: auto;
+    padding: 0.8rem;
+    background: #fff0f3;
+    border-radius: 16px;
+}
+.multiplo-item {
+    background: white;
+    border: 1px solid #ff4a70;
+    border-radius: 40px;
+    padding: 0.3rem 1rem;
+    font-weight: 600;
+    color: #2d181b;
+    font-size: 0.85rem;
+    transition: all 0.1s;
+}
+.multiplo-item:hover {
+    background: #ff4a70;
+    color: white;
+    transform: scale(1.02);
+}
+.multiplos-nota {
+    font-size: 0.7rem;
+    color: #63474a;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+.error-msg {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+
+/* ============================================
+   PROBLEMA 4 - ESTILO MINIMALISTA
+   ============================================ */
+.problema4 {
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #2d181b;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 650px;
+    margin: 40px auto;
+    box-shadow: 12px 12px 0px #ff4a70;
+}
+.descripcion-problema {
+    font-size: 0.85rem;
+    color: #63474a;
+    margin: 0.5rem auto 1.5rem;
+    max-width: 85%;
+}
+.sumas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+}
+.suma-card {
+    flex: 1;
+    min-width: 180px;
+    background: #fff0f3;
+    border-radius: 20px;
+    padding: 1.2rem;
+    border: 1px solid #ff4a70;
+    box-shadow: 4px 4px 0px #2d181b;
+}
+.suma-titulo {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: #ff4a70;
+    margin-bottom: 0.5rem;
+}
+.suma-numero {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #2d181b;
+    margin: 0.2rem 0;
+}
+.suma-rango {
+    font-size: 0.7rem;
+    color: #63474a;
+    font-family: monospace;
+}
+.nota-proceso {
+    font-size: 0.7rem;
+    color: #63474a;
+    margin-top: 1rem;
+    font-style: italic;
+    background: #fff0f3;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 30px;
+}
+
+
+
+
+/* ============================================
+   PROBLEMA 5 - CLASIFICACIÓN DE EDADES
+   ============================================ */
+.problema5 {
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #2d181b;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 850px;
+    margin: 40px auto;
+    box-shadow: 12px 12px 0px #ff4a70;
+}
+
+.edades-form {
+    margin: 1rem 0;
+}
+
+.edades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.campo-edad label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #ff4a70;
+    margin-bottom: 0.2rem;
+}
+
+.campo-edad input {
+    width: 100%;
+    text-align: center;
+}
+
+.resultado-edades {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.tabla-container,
+.estadisticas-container {
+    flex: 1;
+    min-width: 250px;
+}
+
+.tabla-container h3,
+.estadisticas-container h3 {
+    font-size: 0.85rem;
+    color: #2d181b;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid #ff4a70;
+    padding-left: 8px;
+    text-align: left;
+}
+
+.tabla-resultados {
+    width: 100%;
+    font-size: 0.8rem;
+}
+/* ==========================
+   ESTADÍSTICAS
+========================== */
+
+.barras-grafica {
+    background: #fff0f3;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.barra-fila {
+    display: grid;
+    grid-template-columns: 110px 1fr 80px;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.barra-etiqueta {
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2d181b;
+}
+
+.barra-contenedor {
+    width: 100%;
+    height: 24px;
+}
+
+.barra {
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid #2d181b;
+    transition: width 0.3s ease;
+}
+
+.barra-valor {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #2d181b;
+    white-space: nowrap;
+}
+
+/* ============================================
+   PROBLEMA 6 - ESTILO EXACTAMENTE COMO EL EJEMPLO
+   ============================================ */
+.problema6 .resultado-presupuesto {
+    margin-top: 25px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.problema6 .resultado-presupuesto h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #eee;
+}
+.problema6 .lista-presupuesto {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+}
+.problema6 .lista-presupuesto li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+.problema6 .lista-presupuesto li:last-child {
+    border-bottom: none;
+}
+.problema6 .lista-presupuesto li span {
+    font-weight: 600;
+}
+.problema6 .lista-presupuesto li strong {
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+.problema6 .chart-wrap {
+    max-width: 280px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .problema6 .lista-presupuesto li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+
+/* Estilos para problema 7 (contenedor y resultados) */
+.contenedor {
+    max-width: 550px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 12px 12px 0px #ff4a70;
+    border: 2px solid #2d181b;
+}
+.resultados {
+    background: #ffffff !important;
+    border-radius: 16px;
+    border: 2px solid #ff4a70;
+    box-shadow: 6px 6px 0px #2d181b;
+    padding: 20px;
+    margin-top: 25px;
+}
+.resultados h3 {
+    color: #2d181b;
+    margin-bottom: 10px;
+}
+.resultados p {
+    margin: 8px 0;
+    font-weight: 600;
+    color: #2d181b;
+}
+.alert-error {
+    background: #fdecea;
+    border-left: 6px solid #ff4a70;
+    padding: 12px;
+    border-radius: 12px;
+    color: #b71c1c;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+/* ============================================
+   Estilos para problema 8 (estructura de la amiga)
+   ============================================ */
+.contenedor {
+    max-width: 550px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 12px 12px 0px #ff4a70;
+    border: 2px solid #2d181b;
+}
+
+.descripcion {
+    color: var(--oscuro-mid);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Bloque de resultado (donde va la estación y la imagen) */
+.resultado {
+    background: #ffffff !important;
+    border-radius: 16px;
+    border: 2px solid #ff4a70;
+    box-shadow: 6px 6px 0px #2d181b;
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.resultado h3 {
+    color: var(--oscuro);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.estacion {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--rosa);
+    margin: 10px 0;
+}
+
+.imagen-estacion {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    border: 2px solid var(--oscuro);
+    margin-top: 15px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+
+
+/* PROBLEMA 7  */
+.contenedor {
+    max-width: 550px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 12px 12px 0px #ff4a70;
+    border: 2px solid #2d181b;
+}
+
+.resultados {
+    background: #ffffff !important;
+    border-radius: 16px;
+    border: 2px solid #ff4a70;
+    box-shadow: 6px 6px 0px #2d181b;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.resultados h3 {
+    color: #2d181b;
+    margin-bottom: 10px;
+}
+
+.resultados p {
+    margin: 8px 0;
+    font-weight: 600;
+    color: #2d181b;
+}
+
+.alert-error {
+    background: #fdecea;
+    border-left: 6px solid #ff4a70;
+    padding: 12px;
+    border-radius: 12px;
+    color: #b71c1c;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ============================================
+   CSS específico para el PROBLEMA 9 (Potencias)
+   ============================================ */
+
+/* Contenedor principal de la tarjeta */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 3px solid #2d181b;
+    box-shadow: 12px 12px 0px #ff4a70;
+    padding: 2rem 1.75rem;
+    margin-bottom: 2rem;
+    max-width: 550px;
+    margin: 40px auto;
+}
+.card h2 {
+    color: #2d181b;
+    font-size: 1.15rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 3px solid #ffe0e8;
+}
+
+/* Etiqueta (si usas label) */
+label {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #2d181b;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+}
+
+/* Campo de entrada */
+input[type="number"] {
+    background: #ffffff;
+    border: 3px solid #2d181b;
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #2d181b;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 0px rgba(45,24,27,0.12);
+}
+input[type="number"]:focus {
+    background: #fff0f3;
+    border-color: #ff4a70;
+    outline: none;
+    box-shadow: 5px 5px 0px #2d181b;
+    transform: translate(-2px,-2px);
+}
+
+/* Botón de generar */
+button[type="submit"] {
+    background: #ff4a70;
+    color: #ffffff;
+    border: 3px solid #2d181b;
+    border-radius: 14px;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0.5rem;
+    box-shadow: 0px 6px 0px #2d181b;
+    transition: all 0.15s ease;
+}
+button[type="submit"]:hover {
+    background: #ff2a55;
+    transform: translateY(-3px);
+    box-shadow: 0px 9px 0px #2d181b;
+}
+button[type="submit"]:active {
+    transform: translateY(6px);
+    box-shadow: 0px 0px 0px #2d181b;
+}
+
+/* Contenedor de la tabla de resultados */
+.resultado-container {
+    background: #ffffff !important;
+    border-radius: 16px;
+    border: 2px solid #ff4a70;
+    box-shadow: 6px 6px 0px #2d181b;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+/* Tabla dentro del resultado */
+.resultado-container table {
+    background: #ffffff !important;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+.resultado-container th,
+.resultado-container td {
+    border: 1px solid #ff4a70;
+    padding: 10px;
+    text-align: left;
+    background: #ffffff;
+}
+.resultado-container th {
+    background: #ff4a70 !important;
+    color: white;
+}
+.resultado-container tr:nth-child(even) td {
+    background: #fff0f3;
+}
+
+/* Mensaje de error */
+.alert-error {
+    background: #fdecea;
+    border-left: 6px solid #ff4a70;
+    padding: 12px;
+    border-radius: 12px;
+    color: #b71c1c;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Botón volver al menú */
+.btn-menu {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.6rem 1.3rem;
+    background: #2d181b;
+    color: #ffffff;
+    border: 3px solid #2d181b;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 4px 4px 0px #ff4a70;
+    transition: all 0.15s ease;
+}
+.btn-menu:hover {
+    background: #ff4a70;
+    box-shadow: 4px 4px 0px #2d181b;
+    transform: translate(-2px, -2px);
+}
