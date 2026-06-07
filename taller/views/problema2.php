@@ -1,3 +1,6 @@
+
+<?php
+
 /**
  * problema2.php — Suma de números del 1 al 1000.
  * Calcula la suma acumulativa de los enteros desde 1 hasta 1000.
@@ -6,7 +9,7 @@
  */
 
 
-<?php
+
 require_once __DIR__ . '/../models/Utilidades.php';
 
 $tituloPagina = 'Problema #2 – Suma 1 al 1000';

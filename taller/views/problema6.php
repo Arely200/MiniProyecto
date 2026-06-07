@@ -1,4 +1,6 @@
 
+<?php
+
 /**
  * problema6.php — Distribución de presupuesto hospitalario.
  * Se ingresa el presupuesto anual y se reparte según:
@@ -7,7 +9,6 @@
  * Estructuras: foreach, if.
  */
 
-<?php
 require_once __DIR__ . '/../models/Utilidades.php';
 $tituloPagina = 'Problema #6 – Presupuesto Hospitalario';
 require_once __DIR__ . '/header.php';

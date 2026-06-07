@@ -1,12 +1,15 @@
+<?php
 
-
-/**
+/** 
  * problema5.php — Clasificación de edades de 5 personas.
  * Se ingresan 5 edades (0-120) y se clasifican en:
  * Niño (0-12), Adolescente (13-17), Adulto (18-64), Adulto mayor (65+).
  * Genera estadísticas de cantidad por categoría.
  * Estructuras: foreach para validación, switch(true) o if-else para clasificación.
- */<?php
+ * Validación: edades entre 0 y 120, no letras, no negativos.
+ */
+
+
 require_once __DIR__ . '/../models/Utilidades.php';
 
 $tituloPagina = 'Problema #5 – Clasificación de Edades';

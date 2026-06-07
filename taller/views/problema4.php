@@ -1,9 +1,12 @@
+<?php
+
 /**
  * problema4.php — Suma independiente de números pares e impares.
  * Recorre los números del 1 al 200, clasifica como par o impar usando módulo (%),
  * y acumula las sumas por separado.
  * Estructura: ciclo for y operador ternario.
- */<?php
+ */
+
 require_once __DIR__ . '/../models/Utilidades.php';
 
 $tituloPagina = 'Problema #4 – Pares e Impares';

@@ -8,11 +8,11 @@
 - Arely Mendoza  
 - Estrella Pino  
 
-**Fecha de realización:** Mayo 2026  
+**Fecha de realización:** 7 de Junio del 2026  
 
 ---
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 
 Este proyecto resuelve **9 problemas de programación** en PHP utilizando estructuras de control (if, switch, for, foreach), arreglos, funciones y una clase utilitaria con métodos estáticos. Cada problema se presenta en una vista independiente, unificada bajo un mismo diseño visual moderno (colores rosa, tipografía Poppins, sombras y bordes redondeados). El proyecto sigue el patrón **MVC** y aplica buenas prácticas como **DRY**, **OWASP** y **PSR-1**.
 
@@ -93,4 +93,4 @@ El uso de métodos estáticos en Utilidades simplificó la reutilización y el m
 ## Autoras
 Arely Mendoza – Implementación de lógica PHP, diseño CSS, integración de problemas 1-5 y 9.
 
-Arely Mendoza – Implementación de lógica PHP, diseño CSS, integración de problemas 6, 7, 8 y gráficas.
+Estrella Pino – Implementación de lógica PHP, diseño CSS, integración de problemas 6, 7, 8 y gráficas.
