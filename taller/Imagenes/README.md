@@ -20,7 +20,8 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
 
 ## Estructura del Proyecto
 
-![alt text](image-7.png) taller\Imagenes\image-7.png
+taller/Imagenes/image-7.png
+
 
 ---
 
