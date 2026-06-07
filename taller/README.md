@@ -19,7 +19,7 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
 ---
 
 ## Estructura del Proyecto
-![alt text](image.png)
+![alt text](imag1.png)
 
 
 ---
@@ -40,12 +40,13 @@ Este proyecto resuelve **9 problemas de programación** en PHP utilizando estruc
 
 
 ## nologías utilizadas
-PHP 8 (lógica del servidor, formularios, sesiones CSRF opcionales).
-![alt text](image-1.png)
+PHP 8 (lógica del servidor, formularios, sesiones CSRF opcionales)
+![alt text]( image-1.png) 
+
 HTML5 + CSS3 (diseño responsive, variables CSS, animaciones).
 ![alt text](image-3.png)
 JavaScript (gráfica Chart.js en problema 6).
-![alt text](image-2.png)
+![alt text](mage-2.png)
 
 Git / GitHub (control de versiones).
 ![alt text](image-4.png)
