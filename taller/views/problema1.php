@@ -6,6 +6,8 @@
  * Estructuras: foreach para validación, for para mostrar campos.
  * Validación: números positivos, no letras, no negativos.
  */
+
+
 require_once __DIR__ . '/../models/Utilidades.php';
 
 $tituloPagina = 'Problema #1 – Estadísticas';
@@ -59,7 +61,7 @@ $maxVal = $mostrarResultado ? max($numerosValidos) : 0;
                        placeholder="Ingrese el número <?= $i ?>"
                        value="<?= $valorInput ?>" required>
                 <?php if ($errorMsg): ?>
-                    <span class="error-msg">⚠️ <?= Utilidades::limpiarHtml($errorMsg) ?></span>
+                    <span class="error-msg"><?= Utilidades::limpiarHtml($errorMsg) ?></span>
                 <?php endif; ?>
             </div>
         <?php endfor; ?>

@@ -1,0 +1,228 @@
+/* ========== VARIABLES CENTRALIZADAS ========== */
+:root {
+    --rosa: #ff4a70;
+    --rosa-dark: #ff2a55;
+    --rosa-light: #ffe0e8;
+    --rosa-pale: #fff0f3;
+    --oscuro: #2d181b;
+    --oscuro-mid: #63474a;
+    --blanco: #ffffff;
+    --radio: 16px;
+
+    /* Colores del fondo animado (brillo) */
+    --bg-glow-start: #fef6f9;
+    --bg-glow-mid: #fce4ec;
+    --bg-glow-end: #fef6f9;
+
+    /* Colores de las líneas de la cuadrícula */
+    --grid-line-strong: rgba(255, 74, 112, 0.22);
+    --grid-line-soft: rgba(255, 143, 164, 0.10);
+}
+
+/* ── RESET ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+/* ── ANIMACIONES (usando variables) ── */
+@keyframes grid-move{
+    0%{background-position:0 0,0 0,0 0,0 0}
+    100%{background-position:40px 40px,40px 40px,10px 10px,10px 10px}
+}
+@keyframes glow-bg{
+    0%,100%{background-color:var(--bg-glow-start)}
+    50%{background-color:var(--bg-glow-mid)}
+}
+@keyframes pop-in{
+    0%{opacity:0;transform:scale(.85) translateY(30px)}
+    100%{opacity:1;transform:scale(1) translateY(0)}
+}
+@keyframes slide-down{
+    0%{opacity:0;transform:translateY(-24px)}
+    100%{opacity:1;transform:translateY(0)}
+}
+@keyframes badge-pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.06)}
+}
+
+/* ── BODY (usando variables) ── */
+body{
+    font-family:'Poppins',sans-serif;
+    min-height:100vh;
+    display:flex;flex-direction:column;
+    overflow-x:hidden;
+    background-image:
+        linear-gradient(to right, var(--grid-line-strong) 2px, transparent 2px),
+        linear-gradient(to bottom, var(--grid-line-strong) 2px, transparent 2px),
+        linear-gradient(to right, var(--grid-line-soft) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line-soft) 1px, transparent 1px);
+    background-size:40px 40px,40px 40px,10px 10px,10px 10px;
+    animation:grid-move 4s linear infinite, glow-bg 10s ease-in-out infinite;
+}
+
+/* ── HEADER ── */
+header{
+    background: var(--oscuro);
+    border-bottom: 5px solid var(--rosa);
+    padding:22px 2rem 18px;
+    text-align:center;
+    animation:slide-down .5s ease forwards;
+    position:relative;
+}
+header::after{
+    content:'UTP · FISC · DESARROLLO VII';
+    position:absolute;bottom:-16px;left:50%;
+    transform:translateX(-50%);
+    background:var(--rosa);color:#fff;
+    font-size:.6rem;font-weight:800;
+    letter-spacing:3px;padding:4px 18px;
+    border-radius:20px;border:2px solid var(--oscuro);
+    white-space:nowrap;
+}
+.header-logo{font-size:2.4rem;margin-bottom:6px}
+header h1{
+    color:#fff;font-size:clamp(1.1rem,3vw,1.6rem);
+    font-weight:900;text-transform:uppercase;letter-spacing:1.5px;
+}
+header p{
+    color:var(--rosa-light);font-size:.82rem;font-weight:600;
+    margin-top:5px;
+}
+
+/* ── MAIN ── */
+main{
+    flex:1;
+    max-width:1000px;width:100%;
+    margin:0 auto;
+    padding:3.5rem 1.2rem 2.5rem;
+}
+
+/* ── INTRO ── */
+.intro{
+    text-align:center;
+    margin-bottom:2.5rem;
+    animation:pop-in .6s ease forwards;
+}
+.intro-badge{
+    display:inline-block;
+    background:var(--rosa);color:#fff;
+    border:3px solid var(--oscuro);border-radius:30px;
+    font-size:.72rem;font-weight:800;
+    letter-spacing:2px;text-transform:uppercase;
+    padding:6px 20px;margin-bottom:14px;
+    box-shadow:4px 4px 0 #292d18;
+    animation:badge-pulse 2.5s ease-in-out infinite;
+}
+.intro h2{
+    color:var(--oscuro);font-size:clamp(1.4rem,4vw,2rem);
+    font-weight:900;text-transform:uppercase;
+    letter-spacing:-1px;line-height:1.2;
+}
+.intro h2 span{color:var(--rosa)}
+.intro p{
+    color:var(--oscuro-mid);font-size:.92rem;font-weight:600;
+    margin-top:.6rem;
+}
+
+/* ── GRID DE PROBLEMAS ── */
+.problems-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(270px,1fr));
+    gap:1.3rem;
+}
+
+/* ── TARJETA ── */
+.problem-card{
+    background:#fff;
+    border:3px solid var(--rosa);
+    border-radius:20px;
+    padding:1.5rem 1.3rem;
+    text-decoration:none;
+    color:var(--oscuro);
+    box-shadow:7px 7px 0 var(--rosa);
+    transition:transform .15s ease, box-shadow .15s ease;
+    display:flex;flex-direction:column;gap:.6rem;
+    animation:pop-in .6s ease forwards;
+    opacity:0;
+}
+.problem-card:nth-child(1){animation-delay:.05s}
+.problem-card:nth-child(2){animation-delay:.10s}
+.problem-card:nth-child(3){animation-delay:.15s}
+.problem-card:nth-child(4){animation-delay:.20s}
+.problem-card:nth-child(5){animation-delay:.25s}
+.problem-card:nth-child(6){animation-delay:.30s}
+.problem-card:nth-child(7){animation-delay:.35s}
+.problem-card:nth-child(8){animation-delay:.40s}
+.problem-card:nth-child(9){animation-delay:.45s}
+
+.problem-card:hover{
+    transform:translate(-5px,-5px);
+    box-shadow:12px 12px 0 #2d181e;
+}
+.problem-card:active{
+    transform:translate(2px,2px);
+    box-shadow:4px 4px 0 var(--oscuro);
+}
+
+.card-top{
+    display:flex;align-items:center;gap:.8rem;
+}
+.card-emoji{
+    font-size:2rem;line-height:1;
+    background:var(--rosa-pale);
+    border:2px solid var(--oscuro);
+    border-radius:12px;
+    padding:6px 10px;
+    flex-shrink:0;
+}
+.card-num{
+    font-size:.68rem;font-weight:800;
+    color:var(--rosa);text-transform:uppercase;
+    letter-spacing:2px;
+}
+.card-titulo{
+    font-size:1rem;font-weight:900;
+    color:var(--oscuro);line-height:1.2;
+}
+.card-desc{
+    font-size:.78rem;font-weight:600;
+    color:var(--oscuro-mid);line-height:1.5;
+    border-top:2px dashed var(--rosa-light);
+    padding-top:.6rem;
+}
+.card-arrow{
+    margin-top:auto;
+    font-size:.72rem;font-weight:800;
+    color:var(--rosa);text-transform:uppercase;
+    letter-spacing:1px;
+    display:flex;align-items:center;gap:5px;
+}
+.card-arrow::after{content:'→';font-size:1rem}
+
+/* ── FOOTER ── */
+footer{
+    background:var(--oscuro);
+    border-top:5px solid var(--rosa);
+    color:var(--rosa-light);
+    text-align:center;
+    padding:1rem;
+    font-size:.78rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:.5px;
+}
+footer strong{color:var(--rosa)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--rosa-pale)}
+::-webkit-scrollbar-thumb{background:var(--rosa);border-radius:4px;border:2px solid var(--oscuro)}
+::selection{background:var(--rosa);color:#fff}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+    main{padding:3rem .8rem 2rem}
+    .problems-grid{grid-template-columns:1fr 1fr}
+    .card-desc{display:none}
+    .problem-card{padding:1.1rem 1rem}
+}
+@media(max-width:380px){
+    .problems-grid{grid-template-columns:1fr}
+}

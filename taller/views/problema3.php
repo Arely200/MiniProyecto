@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </form>
 
     <?php if ($error): ?>
-        <div class="error-msg">⚠️ <?= Utilidades::limpiarHtml($error) ?></div>
+        <div class="error-msg"> <?= Utilidades::limpiarHtml($error) ?></div>
     <?php endif; ?>
 
     <?php if ($mostrarResultado): ?>

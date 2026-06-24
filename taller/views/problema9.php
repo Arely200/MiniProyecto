@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <div class="card problema9">   <!-- ← AGREGADO: clase problema9 -->
-    <h2>🔢 Potencias de un Número</h2>
+    <h2>Potencias de un Número</h2>
     <form method="POST">
         <input type="number" id="numero" name="numero" min="1" max="9"
                placeholder="Ingrese un número del 1 al 9" required

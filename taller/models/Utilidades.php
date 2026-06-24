@@ -7,7 +7,7 @@
  */
 class Utilidades
 {
-    // ==================== VALIDACIÓN ====================
+    //VALIDACIÓN 
     // Usados en múltiples problemas (1,2,3,4,5,6,7,8,9)
 
     /**
@@ -49,7 +49,7 @@ class Utilidades
             || preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $fecha) === 1;
     }
 
-    // ==================== SANITIZACIÓN (OWASP) ====================
+    // SANITIZACIÓN (OWASP)
     // Usados en todas las vistas
 
     /**
@@ -79,7 +79,7 @@ class Utilidades
         return isset($var) ? $var : $default;
     }
 
-    // ==================== MATEMÁTICAS ====================
+    // CALCULOS MATEMÁTICOS
     // Métodos de cálculo estadístico y potencias
 
     /**
@@ -137,8 +137,7 @@ class Utilidades
 
     /**
      * Genera las primeras 15 potencias de un número base (1-9).
-     * @return array Arreglo asociativo [exponente => resultado]
-     * @used-by problema 9
+     * @return array 
      */
     public static function generarPotencias(int $base): array
     {
@@ -149,8 +148,7 @@ class Utilidades
         return $potencias;
     }
 
-    // ==================== ESTACIONES (PROBLEMA 8) ====================
-    // Específico para el problema 8
+    //ESTACIONES (PROBLEMA 8) 
 
     /**
      * Determina la estación del año según fecha (hemisferio norte).
@@ -176,7 +174,7 @@ class Utilidades
         return 'Invierno';
     }
 
-    // ==================== NAVEGACIÓN ====================
+    //NAVEGACIÓN
     // DRY: centraliza el enlace "Volver al menú"
 
     /**
@@ -187,9 +185,6 @@ class Utilidades
     {
         return '<a href="' . self::limpiarHtml($url) . '" class="btn-menu">&#8592; Volver al menú</a>';
     }
-
-    // ==================== CSRF (OPCIONAL) ====================
-    // Seguridad adicional
 
     /**
      * Genera token CSRF y lo almacena en sesión.
